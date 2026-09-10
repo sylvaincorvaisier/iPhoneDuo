@@ -1,0 +1,1050 @@
+WEBVTT
+
+1
+00:00:04.280 --> 00:00:05.780
+Hi, I'm David Jackson,
+
+2
+00:00:06.560 --> 00:00:08.720
+an engineering manager on
+the UI Frameworks team.
+
+3
+00:00:09.700 --> 00:00:12.300
+Today, I'll cover how to
+bring your app to iPhone Duo.
+
+4
+00:00:13.420 --> 00:00:15.520
+First, I'll tell you how
+to get started in Xcode.
+
+5
+00:00:16.399 --> 00:00:19.260
+Next, I'll walk through
+general layout guidance to make
+
+6
+00:00:19.300 --> 00:00:21.080
+your app resize correctly
+on any platform.
+
+7
+00:00:22.460 --> 00:00:23.720
+Then, I'll tell you about
+
+8
+00:00:23.880 --> 00:00:25.736
+specific layout
+guidance for iPhone Duo
+
+9
+00:00:25.786 --> 00:00:27.160
+to make your app truly shine.
+
+10
+00:00:28.440 --> 00:00:29.340
+Let's get started.
+
+11
+00:00:29.880 --> 00:00:31.013
+Your app will work
+
+12
+00:00:31.063 --> 00:00:33.740
+on iPhone Duo even if
+you haven't built it
+
+13
+00:00:33.790 --> 00:00:35.060
+with the iOS 27 SDK.
+
+14
+00:00:36.260 --> 00:00:37.443
+When the device is closed,
+
+15
+00:00:37.493 --> 00:00:39.058
+your app will use the screen space
+
+16
+00:00:39.108 --> 00:00:41.000
+to the left of the
+status bar and camera.
+
+17
+00:00:41.860 --> 00:00:42.983
+When the device is open,
+
+18
+00:00:43.033 --> 00:00:45.400
+your app will be a familiar
+size and aspect ratio.
+
+19
+00:00:46.060 --> 00:00:48.620
+Here's how to take more advantage
+of the available screen space.
+
+20
+00:00:49.100 --> 00:00:51.505
+If you've already
+adopted the iOS 27 SDK,
+
+21
+00:00:51.555 --> 00:00:52.725
+the work you've done
+
+22
+00:00:52.775 --> 00:00:55.560
+to support iPhone app
+resizing really pays off.
+
+23
+00:00:56.020 --> 00:00:57.200
+Now your app will look like this.
+
+24
+00:00:57.760 --> 00:00:58.630
+Your app will extend
+
+25
+00:00:58.680 --> 00:01:01.160
+to the left of the status bar
+area on the inner display.
+
+26
+00:01:02.500 --> 00:01:04.480
+And here's how to take advantage
+of the entire screen space.
+
+27
+00:01:05.720 --> 00:01:08.320
+When you build your app
+with the iOS 27.1 SDK,
+
+28
+00:01:09.300 --> 00:01:10.820
+your app extends to
+the edge of the screen.
+
+29
+00:01:11.640 --> 00:01:12.630
+Standard navigation
+
+30
+00:01:12.680 --> 00:01:15.700
+and toolbar buttons now lay out
+vertically under the status bar.
+
+31
+00:01:16.759 --> 00:01:19.215
+To get the full-screen experience,
+
+32
+00:01:19.265 --> 00:01:20.700
+download Xcode 27.1.
+
+33
+00:01:21.460 --> 00:01:23.122
+Choose the iPhone Duo simulator
+
+34
+00:01:23.172 --> 00:01:24.780
+to run your app in Device Hub.
+
+35
+00:01:25.240 --> 00:01:28.059
+Use the control buttons at
+the bottom of the screen
+
+36
+00:01:28.109 --> 00:01:29.032
+to open,
+
+37
+00:01:29.082 --> 00:01:31.220
+close, rotate, or fold iPhone Duo.
+
+38
+00:01:32.820 --> 00:01:34.737
+Now that your app is using
+the full screen space,
+
+39
+00:01:34.787 --> 00:01:37.020
+you may notice some issues
+with your layout in each pose.
+
+40
+00:01:37.830 --> 00:01:39.816
+A great iPhone Duo
+app follows flexible
+
+41
+00:01:39.866 --> 00:01:42.420
+layout best practices we've
+discussed in the past.
+
+42
+00:01:43.300 --> 00:01:44.225
+Most recently,
+
+43
+00:01:44.275 --> 00:01:47.100
+we covered flexible layout
+principles during the talk,
+
+44
+00:01:47.640 --> 00:01:49.960
+"Modernize Your UIKit
+App" from WWDC26.
+
+45
+00:01:51.160 --> 00:01:53.400
+These principles matter more
+than ever for iPhone Duo,
+
+46
+00:01:54.120 --> 00:01:57.260
+as your app will need to
+resize to fit every pose,
+
+47
+00:01:57.310 --> 00:01:59.500
+opened, closed, rotated, or folded.
+
+48
+00:02:00.760 --> 00:02:03.280
+iPhone apps have been adapting
+to change for a long time.
+
+49
+00:02:03.860 --> 00:02:05.927
+They've adapted to new screen sizes,
+
+50
+00:02:05.977 --> 00:02:06.803
+screen shapes,
+
+51
+00:02:06.853 --> 00:02:09.380
+and special regions
+like the Dynamic Island.
+
+52
+00:02:10.259 --> 00:02:12.052
+iPhone Duo continues along that path
+
+53
+00:02:12.102 --> 00:02:14.300
+with a new screen shape
+and camera location.
+
+54
+00:02:15.360 --> 00:02:16.765
+With iOS 27,
+
+55
+00:02:16.815 --> 00:02:18.719
+people can resize your app larger than
+
+56
+00:02:18.769 --> 00:02:21.080
+ever before using iPhone
+Mirroring on the Mac.
+
+57
+00:02:22.480 --> 00:02:25.280
+Opening and closing iPhone
+Duo works the same way.
+
+58
+00:02:26.020 --> 00:02:28.399
+Your app may react to different
+size class boundaries,
+
+59
+00:02:28.449 --> 00:02:29.760
+but it is still an iPhone app.
+
+60
+00:02:30.710 --> 00:02:31.938
+The best app layouts are
+
+61
+00:02:31.988 --> 00:02:34.000
+adaptive across a
+continuum of devices.
+
+62
+00:02:34.920 --> 00:02:37.302
+They avoid making assumptions
+about display sizes
+
+63
+00:02:37.352 --> 00:02:39.980
+or device capabilities based
+on user interface idioms.
+
+64
+00:02:40.920 --> 00:02:42.454
+And they use tools like size classes
+
+65
+00:02:42.504 --> 00:02:44.600
+to differentiate between
+small and large layouts.
+
+66
+00:02:45.660 --> 00:02:46.900
+Let's talk more about size classes.
+
+67
+00:02:48.060 --> 00:02:50.404
+Horizontal and vertical size
+classes are loosely tied
+
+68
+00:02:50.454 --> 00:02:52.620
+to the available space in
+their given dimensions.
+
+69
+00:02:53.860 --> 00:02:55.092
+Size classes express the user
+
+70
+00:02:55.142 --> 00:02:56.850
+experience your app
+should provide based
+
+71
+00:02:56.900 --> 00:02:57.880
+on the available space.
+
+72
+00:02:58.880 --> 00:03:00.560
+For SwiftUI, use the environment.
+
+73
+00:03:01.420 --> 00:03:03.020
+For UIKit, use trait collection.
+
+74
+00:03:04.400 --> 00:03:06.800
+On iPhone Duo, there are
+several size class combinations.
+
+75
+00:03:08.100 --> 00:03:10.975
+On the outer display,
+like other iPhone models,
+
+76
+00:03:11.025 --> 00:03:13.839
+iPhone Duo has regular
+vertical size class and
+
+77
+00:03:13.860 --> 00:03:16.000
+compact horizontal
+size class in portrait,
+
+78
+00:03:16.810 --> 00:03:19.640
+and compact vertical and horizontal
+size classes in landscape.
+
+79
+00:03:20.860 --> 00:03:21.760
+On the inner display,
+
+80
+00:03:22.230 --> 00:03:25.220
+the additional space lets you
+show more content like sidebars.
+
+81
+00:03:26.180 --> 00:03:29.420
+As such, it has regular horizontal
+and vertical size classes.
+
+82
+00:03:30.340 --> 00:03:31.624
+The interface orientation
+
+83
+00:03:31.674 --> 00:03:34.320
+on the outer display behaves
+like any other iPhone.
+
+84
+00:03:35.460 --> 00:03:38.660
+iPhone Duo is a great opportunity
+to support landscape orientation,
+
+85
+00:03:39.660 --> 00:03:41.840
+as people may want to set
+the phone down like a tent.
+
+86
+00:03:42.660 --> 00:03:45.640
+Interface orientation on the
+inner display behaves differently.
+
+87
+00:03:46.610 --> 00:03:49.520
+The inner display doesn't honor your
+supported interface orientations.
+
+88
+00:03:50.600 --> 00:03:51.500
+As with Idiom,
+
+89
+00:03:51.550 --> 00:03:54.300
+avoid checking interface
+orientation for layout decisions.
+
+90
+00:03:55.060 --> 00:03:56.020
+Use size classes instead.
+
+91
+00:03:57.000 --> 00:03:58.500
+On a device with two displays,
+
+92
+00:03:59.260 --> 00:04:01.000
+avoid referencing the
+main screen in your code.
+
+93
+00:04:01.240 --> 00:04:04.360
+It's ambiguous and will be
+deprecated in a future release.
+
+94
+00:04:05.140 --> 00:04:07.560
+If possible, don't use
+screen references at all.
+
+95
+00:04:08.150 --> 00:04:10.760
+Instead, use more local
+concepts like the environment,
+
+96
+00:04:11.220 --> 00:04:13.400
+trait collection,
+or the scene's bounds.
+
+97
+00:04:14.240 --> 00:04:15.580
+If you need access to the screen,
+
+98
+00:04:16.040 --> 00:04:17.640
+access it dynamically
+from the window scene.
+
+99
+00:04:19.040 --> 00:04:21.459
+To make sure your UI fits the
+corners of the screen perfectly,
+
+100
+00:04:22.120 --> 00:04:25.040
+use Concentricity APIs
+introduced in iOS 26.
+
+101
+00:04:25.860 --> 00:04:28.660
+They're updated to work with
+the screen shapes on iPhone Duo.
+
+102
+00:04:30.000 --> 00:04:32.200
+For SwiftUI, use ConcentricRectangle.
+
+103
+00:04:33.040 --> 00:04:35.340
+For UIKit, use UICornerConfiguration.
+
+104
+00:04:36.880 --> 00:04:38.999
+iPhone Duo will continue to honor
+
+105
+00:04:39.020 --> 00:04:40.480
+the UIRequiresFullScreen key,
+
+106
+00:04:41.380 --> 00:04:42.571
+but your app will still resize
+
+107
+00:04:42.621 --> 00:04:44.460
+when someone opens or
+closes their iPhone Duo.
+
+108
+00:04:45.760 --> 00:04:48.300
+iPhone Duo respects your
+supported interface orientations,
+
+109
+00:04:49.140 --> 00:04:51.080
+but your app will scale
+on the inner display,
+
+110
+00:04:51.130 --> 00:04:52.720
+including in Split View multitasking.
+
+111
+00:04:53.680 --> 00:04:55.357
+For more on iPhone Duo screens,
+
+112
+00:04:55.407 --> 00:04:56.920
+see the companion Tech Talk,
+
+113
+00:04:57.520 --> 00:05:00.440
+"Leverage multiple displays
+and scenes on iPhone Duo."
+
+114
+00:05:01.380 --> 00:05:04.200
+Now that your app is resizing to
+fit the inner and outer displays,
+
+115
+00:05:04.860 --> 00:05:07.420
+I'll talk about unique layout
+considerations for iPhone Duo.
+
+116
+00:05:08.620 --> 00:05:10.980
+Using standard navigation
+patterns is a great way
+
+117
+00:05:11.030 --> 00:05:12.660
+to adapt to every iPhone Duo pose.
+
+118
+00:05:13.580 --> 00:05:15.274
+SwiftUI's NavigationSplitView
+
+119
+00:05:15.324 --> 00:05:18.380
+or UIKit's UISplitViewController
+are fully adaptive.
+
+120
+00:05:19.540 --> 00:05:20.832
+When iPhone Duo is closed,
+
+121
+00:05:20.882 --> 00:05:23.340
+columns will collapse to
+single-stack navigation.
+
+122
+00:05:24.180 --> 00:05:25.050
+When open,
+
+123
+00:05:25.100 --> 00:05:27.760
+columns will appear both
+tiled and as overlays.
+
+124
+00:05:28.540 --> 00:05:29.466
+SwiftUI's TabView
+
+125
+00:05:29.516 --> 00:05:31.785
+and UIKit's
+UITabBarController also adapt
+
+126
+00:05:31.835 --> 00:05:32.900
+to all poses.
+
+127
+00:05:34.180 --> 00:05:36.880
+By default, tabs will appear
+on the inner and outer display,
+
+128
+00:05:37.580 --> 00:05:38.920
+laying out vertically
+when appropriate.
+
+129
+00:05:39.980 --> 00:05:41.002
+On the inner display,
+
+130
+00:05:41.052 --> 00:05:43.520
+you can opt into a sidebar
+with richer navigation.
+
+131
+00:05:44.380 --> 00:05:47.440
+For SwiftUI, set the default
+tab bar placement to sidebar.
+
+132
+00:05:48.180 --> 00:05:50.440
+For UIKit, set the preferred
+placement to sidebar.
+
+133
+00:05:51.520 --> 00:05:53.000
+Sheets also adapt to all poses.
+
+134
+00:05:53.780 --> 00:05:56.380
+On the outer display, sheets can
+have buttons that lay out vertically.
+
+135
+00:05:57.160 --> 00:05:59.060
+On the inner display,
+sheets are centered.
+
+136
+00:05:59.780 --> 00:06:02.300
+Other presentations like
+popovers, context menus,
+
+137
+00:06:02.710 --> 00:06:04.700
+and alerts also adapt to each pose.
+
+138
+00:06:05.600 --> 00:06:07.022
+Navigation bars, toolbars,
+
+139
+00:06:07.072 --> 00:06:09.440
+and tab bars lay out
+outside the safe area.
+
+140
+00:06:10.160 --> 00:06:12.480
+They automatically avoid
+system UI like the status bar
+
+141
+00:06:13.020 --> 00:06:14.340
+and hardware features like the camera.
+
+142
+00:06:15.440 --> 00:06:18.120
+Horizontal bars provide
+top and bottom insets,
+
+143
+00:06:18.670 --> 00:06:21.220
+while vertical bars provide
+leading and trailing insets.
+
+144
+00:06:22.100 --> 00:06:24.120
+For a deep dive on
+vertically arranged content,
+
+145
+00:06:24.760 --> 00:06:27.580
+check out the companion tech talk,
+"Raise the Bar with iPhone Duo".
+
+146
+00:06:29.000 --> 00:06:30.490
+Respecting safe areas ensures
+
+147
+00:06:30.540 --> 00:06:32.240
+your app's controls are reachable
+
+148
+00:06:32.720 --> 00:06:33.800
+and your app is fully visible.
+
+149
+00:06:34.560 --> 00:06:36.400
+Here's how to best adopt
+safe areas in your app.
+
+150
+00:06:37.640 --> 00:06:40.780
+When positioning your UI,
+make sure to place foreground elements
+
+151
+00:06:41.220 --> 00:06:43.360
+like interactive controls
+within the safe area.
+
+152
+00:06:44.340 --> 00:06:45.155
+For SwiftUI,
+
+153
+00:06:45.205 --> 00:06:47.700
+your content is placed within
+the safe area by default.
+
+154
+00:06:48.660 --> 00:06:51.100
+For UIKit, if you are
+laying out views manually,
+
+155
+00:06:51.660 --> 00:06:53.720
+reference the view's safe area insets,
+
+156
+00:06:54.120 --> 00:06:56.486
+or use Auto Layout to
+constrain the views
+
+157
+00:06:56.536 --> 00:06:58.260
+to the safe area layout guide.
+
+158
+00:06:58.960 --> 00:07:01.560
+Allow background elements
+such as full-bleed artwork
+
+159
+00:07:02.030 --> 00:07:03.380
+to fill the available space,
+
+160
+00:07:03.960 --> 00:07:05.940
+extending behind
+toolbars and sidebars.
+
+161
+00:07:06.960 --> 00:07:09.260
+For SwiftUI, use ignoresSafeArea.
+
+162
+00:07:10.100 --> 00:07:11.880
+For UIKit, use the view's bounds.
+
+163
+00:07:12.880 --> 00:07:15.220
+Keep in mind that safe
+areas are often asymmetric.
+
+164
+00:07:16.000 --> 00:07:17.780
+This is especially true on iPhone Duo.
+
+165
+00:07:18.820 --> 00:07:20.560
+For example, vertical buttons can
+
+166
+00:07:20.720 --> 00:07:23.800
+appear on the left side in landscape
+and Split View multitasking.
+
+167
+00:07:24.680 --> 00:07:25.600
+As such,
+
+168
+00:07:25.650 --> 00:07:28.460
+avoid assuming that insets
+on opposite sides are equal.
+
+169
+00:07:29.620 --> 00:07:32.060
+Instead, write code that
+handles each side independently.
+
+170
+00:07:33.220 --> 00:07:34.398
+As with safe areas,
+
+171
+00:07:34.448 --> 00:07:36.640
+layout margins are also asymmetric.
+
+172
+00:07:37.500 --> 00:07:39.383
+This lets your foreground
+content get closer
+
+173
+00:07:39.433 --> 00:07:41.100
+to vertical buttons
+and the status bar,
+
+174
+00:07:41.640 --> 00:07:43.260
+while preserving the margin
+on the opposite side.
+
+175
+00:07:44.600 --> 00:07:46.511
+It's important to test
+your handling of safe areas
+
+176
+00:07:46.561 --> 00:07:47.620
+in different configurations.
+
+177
+00:07:48.540 --> 00:07:50.160
+Split View multitasking
+is no exception.
+
+178
+00:07:50.860 --> 00:07:53.400
+Using Device Hub, preview
+your app on the inner display.
+
+179
+00:07:54.260 --> 00:07:56.622
+Drag your app using the
+home indicator at the bottom
+
+180
+00:07:56.672 --> 00:07:57.840
+to one side of the screen.
+
+181
+00:07:58.600 --> 00:07:59.960
+An area to drop your app appears.
+
+182
+00:08:01.140 --> 00:08:03.120
+Then, drag your app to the other side.
+
+183
+00:08:04.220 --> 00:08:06.700
+Vertically laid-out content can
+appear on either side of your app.
+
+184
+00:08:08.100 --> 00:08:09.277
+Lastly, in iOS 27.1,
+
+185
+00:08:09.327 --> 00:08:10.942
+we're introducing a new API
+
+186
+00:08:10.992 --> 00:08:12.668
+that lets your custom UI use
+
+187
+00:08:12.718 --> 00:08:14.914
+as much of the available screen space
+
+188
+00:08:14.964 --> 00:08:16.699
+as possible without colliding
+
+189
+00:08:16.749 --> 00:08:18.180
+with system-provided UI.
+
+190
+00:08:19.370 --> 00:08:21.123
+For SwiftUI,
+
+191
+00:08:21.173 --> 00:08:22.100
+use ReservedRegion
+
+192
+00:08:22.150 --> 00:08:24.879
+to safely position UI
+elements outside the safe area
+
+193
+00:08:24.929 --> 00:08:26.480
+while maximizing usable space.
+
+194
+00:08:27.480 --> 00:08:30.320
+For UIKit, it's called
+UIViewReservedRegion.
+
+195
+00:08:31.480 --> 00:08:32.630
+This is a great option
+
+196
+00:08:32.680 --> 00:08:34.305
+for building your own custom bars
+
+197
+00:08:34.355 --> 00:08:36.180
+or when implementing edge-to-edge UI.
+
+198
+00:08:37.310 --> 00:08:39.249
+For more information
+on reserved regions,
+
+199
+00:08:39.299 --> 00:08:40.721
+including how you can use them
+
+200
+00:08:40.771 --> 00:08:42.820
+to build custom UI that
+adapts to the fold,
+
+201
+00:08:43.580 --> 00:08:44.885
+see the companion Tech Talk,
+
+202
+00:08:44.935 --> 00:08:47.380
+"Strike a Pose with Adaptive
+Layouts on iPhone Duo."
+
+203
+00:08:48.720 --> 00:08:50.760
+To summarize safe area best practices,
+
+204
+00:08:50.810 --> 00:08:52.100
+use standard bars for UI
+
+205
+00:08:52.150 --> 00:08:54.480
+that automatically
+adapts to the safe area.
+
+206
+00:08:55.040 --> 00:08:56.163
+Align your interactive
+
+207
+00:08:56.213 --> 00:08:58.640
+or visible foreground
+content to the safe area,
+
+208
+00:08:59.420 --> 00:09:01.740
+while background content may
+extend past the safe area.
+
+209
+00:09:02.740 --> 00:09:04.600
+Make sure to account for, and test,
+
+210
+00:09:05.320 --> 00:09:07.100
+asymmetrical safe areas
+and layout margins.
+
+211
+00:09:08.260 --> 00:09:09.460
+If you have more complex layouts,
+
+212
+00:09:10.060 --> 00:09:11.080
+consider using reserved regions.
+
+213
+00:09:12.120 --> 00:09:14.580
+I covered a lot of adaptive
+layout best practices.
+
+214
+00:09:15.420 --> 00:09:17.840
+Here's an efficient way to make
+sure your app follows all of them.
+
+215
+00:09:18.760 --> 00:09:21.060
+During the talk,
+Modernize Your UIKit App,
+
+216
+00:09:21.720 --> 00:09:23.780
+we introduced a new app
+modernization skill.
+
+217
+00:09:24.840 --> 00:09:25.892
+With Xcode 27.1,
+
+218
+00:09:25.942 --> 00:09:28.880
+this skill has a new name:
+App Resizability.
+
+219
+00:09:29.930 --> 00:09:32.320
+It now supports
+SwiftUI and iPhone Duo.
+
+220
+00:09:33.070 --> 00:09:33.970
+Give it a try.
+
+221
+00:09:35.040 --> 00:09:37.540
+Now your app is ready to feel
+right at home on iPhone Duo.
+
+222
+00:09:38.850 --> 00:09:41.168
+To recap, download Xcode 27.1,
+
+223
+00:09:41.218 --> 00:09:42.540
+simulate your app
+
+224
+00:09:42.590 --> 00:09:45.020
+on iPhone Duo using Device Hub,
+
+225
+00:09:45.860 --> 00:09:47.187
+make sure your app follows all
+
+226
+00:09:47.237 --> 00:09:49.240
+the adaptive layout best
+practices I covered,
+
+227
+00:09:49.770 --> 00:09:51.260
+and try out the App
+Resizability skill.
+
+228
+00:09:52.330 --> 00:09:53.230
+And that's it.
+
+229
+00:09:53.280 --> 00:09:54.420
+Thank you so much for your time.
+
+230
+00:09:54.930 --> 00:09:57.673
+I look forward to seeing your
+iPhone Duo app above the fold
+
+231
+00:09:57.722 --> 00:09:58.620
+on the App Store.
